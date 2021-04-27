@@ -45,10 +45,23 @@ header{
 }
 
 .toggle{
-    background: url(./bars-solid.svg);
+    background-image: url(./bars-solid.svg);
     background-position: center;
     background-repeat: no-repeat;
-    color: aliceblue;
+    color: rgb(136, 3, 136);
+    z-index: 3;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 100px;
+    cursor: pointer;
+}
+
+.toggle.Close{
+    background-image: url(./times-solid.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(236, 41, 171);
     z-index: 3;
     height: 30px;
     width: 30px;
@@ -79,18 +92,36 @@ h1{
     text-align: left;
     background-color: rgba(78, 141, 196, 0.158);
     align-content: center;
-    transition: 0.7s ease;
-    transition-delay: 0.3s;
+    transition: 1.5s ease;
+    transition-delay: 0.5s;
 }
+
+.maincontainer.Close{
+    width: 80%;
+    transition: 1.5s ease;
+    transition-delay: 0.5s;
+}
+
 
 .menuHolder{
     z-index: 10;
     position: absolute;
-    left: -80%;
+    opacity: 0;
+    right: 100%;
+    visibility: hidden;
+    pointer-events: none;
     width: 300px;
     height: 80%;
     background: rgba(11, 43, 150, 0.137);
-    transition: 0.5 ease-in-out;
+    transition: 2s ease-in-out;
+    transition-delay: 0.1s;
+}
+.menuHolder.Close{
+    left: 80%;
+    opacity: 0.9;
+    visibility:unset;
+    pointer-events: all;
+    transition: 2s ease-in-out;
     transition-delay: 0.1s;
 }
 
